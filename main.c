@@ -1,90 +1,100 @@
-#include "stm32f10x.h"                  // Device header
+
+#include "main.h"
+
+uint8_t Rx_Buff[20]; 											// Buffer luu chuoi nhan duoc
+uint8_t Rx_Data;             							// Luu byte nhan duoc
+uint8_t Tx_Buff[20] = "Hello Vietnam";    // Buffer truyen di
+uint8_t _rxIndex;                         // Con tro cua Rx_Buff
+uint16_t Tx_Flag =0;                      // Co bao nhan thanh cong
+uint16_t tmp;                      // Co bao nhan thanh cong
+
+UART_HandleTypeDef huart2;
 
 
-void systick_init(void);
-void DelayMs(unsigned long t);
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
 void dot(void);
 void dash(void);
 void SoundLetter(char text);
+static void MX_GPIO_Init(void);
+static void MX_USART2_UART_Init(void);
+/* USER CODE BEGIN PFP */
 
-char text;
+/* USER CODE END PFP */
 
-int main(void)
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	systick_init(); // Delay function
-	RCC->APB2ENR |= 1;  // Enable clock port A
-	RCC->APB2ENR |=0x10; // Enable clock port C
-	RCC->APB1ENR |= 0x20000; // Enable USART2
-	
-	/*Enable pins for USART2*/
-	GPIOA->CRL |= 0xB00; // Set PA2 as output mode 50 Mhz and alternate func PP
-	GPIOA->CRL |=0x8000; // Set PA3 as input  mode and Input with PU/PD
-	
-	USART2 -> BRR = 0xEA6;  // Set up baud rate = 9600 bps
-	
-	USART2->CR1 |= 8; // Enable USART transmit
-	USART2->CR1 |= 4; // Enable USART receive
-	USART2->CR1 |= 0x2000; // Enable USART
-	
-	GPIOC->CRH   &=0xFF0FFFFF;     //Reset PC13 
-	GPIOC->CRH   |=0x700000;     // General purpose output Open-drain
-	GPIOC->BSRR = 0x2000;
-	
-		while(1)
+	if(huart->Instance == USART2 )
 	{
-		//Receive Char
-		while((USART2->SR & 0x20) == 0x00)
-		{};
-		text = USART2->DR;
-		
-		// Compiler
-    if(text >= 'a' && text <='z')
-    {      
-      text = text - 32;
-    }
-    if(text < 65 || text > 90)
-    {
-      text = ' ';
-    }
-    SoundLetter(text);
-    DelayMs(400);
+		if(Rx_Data !=13 )
+			{
+				Rx_Buff[_rxIndex++] = Rx_Data;  // Them du lieu vao Buffer
+			}
+			else if(Rx_Data == 13)
+			{
+				_rxIndex = 0;              // Xoa con tro 
+				Tx_Flag =1;                // Bat co 
+			}
+		HAL_UART_Receive_IT(&huart2, &Rx_Data, 1);
 	}
 	
 }
-
-void systick_init(void)
+int main(void)
 {
-	SysTick->CTRL = 0;
-	SysTick->LOAD = 0x00FFFFFF;
-	SysTick->VAL = 0;
-	SysTick->CTRL |= 5;
+
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+	
+	//__HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
+	//__HAL_UART_ENABLE_IT(&huart2, UART_IT_TC);
+
+	//HAL_UART_Transmit(&huart2, Tx_Buff, sizeof(Tx_Buff), 100);
+	
+
+	//HAL_UART_Receive_IT(&huart2, &Rx_Data,1);
+	//HAL_Delay(1000);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+
+ while (1)
+  {
+
+		HAL_UART_Receive_IT(&huart2, &Rx_Data,1);
+
+		HAL_Delay(1000);
+
+			for( int i =0; i< 20; i++)
+			{
+			SoundLetter(Rx_Buff[i]);
+			Rx_Buff[i]=0;
+			}
+
+		
+  }
+  /* USER CODE END 3 */
 }
 
-void DelayMs(unsigned long t)
-{
-	for(;t>0;t--)
-		{
-			SysTick->LOAD = 0x11940;
-			SysTick->VAL = 0;
-			while((SysTick->CTRL & 0x00010000) == 0);
-		}
-}
 void dot(void)
 {
-	GPIOC->BSRR = 0x2000;
-	DelayMs(100);
-	GPIOC->BSRR = 0x20000000;
-	DelayMs(200);
-	GPIOC->BSRR = 0x2000;
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13, 0);
+	HAL_Delay(100);
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13, 1);
+	HAL_Delay(200);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
 }
 
 void dash(void)
 {
-	GPIOC->BSRR = 0x2000;
-	DelayMs(300);
-	GPIOC->BSRR = 0x20000000;
-	DelayMs(200);
-	GPIOC->BSRR = 0x2000;
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13, 0);
+	HAL_Delay(300);
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13, 1);
+	HAL_Delay(200);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
 }
 
 void SoundLetter(char text)
@@ -226,9 +236,121 @@ void SoundLetter(char text)
       dot();
       return;
     case ' ':
-      DelayMs(400);
+      HAL_Delay(400);
       return; 
   }
 }
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
+
+}
+
+
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PC13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+}
+
+
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 
 
