@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=OUT Pin=X3-1
+Removed Pin From Net: NetName=GND Pin=X3-2
+Added Component: Designator=TP1(TP1)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=OUT Pin=TP1-1
+Change Net Color : Old Net Color=Yellow New Net Color=Yellow
+Change Net Color : Old Net Color=RGB(255, 110, 110) New Net Color=RGB(255, 110, 110)
+Change Net Color : Old Net Color=RGB(110, 255, 255) New Net Color=RGB(110, 255, 255)
+Added Member To Class: ClassName=Sch_Kur Member=Component TP1
+Added Room: Name=Sch_Kur

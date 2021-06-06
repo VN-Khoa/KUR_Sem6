@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=USB_P Pin=DA2-1
+Removed Pin From Net: NetName=GND Pin=DA2-2
+Removed Pin From Net: NetName=USB_N Pin=DA2-3
+Removed Pin From Net: NetName=+5V Pin=DA2-5
+Removed Member From Class: ClassName=Sch_Kur Member=BQ1
+Removed Member From Class: ClassName=Sch_Kur Member=DA2
+Change Component Designator: OldDesignator=H1 NewDesignator=hole1
+Change Component Designator: OldDesignator=H2 NewDesignator=hole2
+Change Component Designator: OldDesignator=H3 NewDesignator=hole3
+Change Component Designator: OldDesignator=H4 NewDesignator=hole4
+Added Component: Designator=VD3(LLP75)
+Added Component: Designator=ZQ1(CRYSTAL-HC49S)
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=USB_P Pin=VD3-1
+Added Pin To Net: NetName=GND Pin=VD3-2
+Added Pin To Net: NetName=USB_N Pin=VD3-3
+Added Pin To Net: NetName=+5V Pin=VD3-5
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=DD2-5
+Added Pin To Net: NetName=NetC6_2 Pin=ZQ1-2
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=DD2-6
+Added Pin To Net: NetName=NetC7_2 Pin=ZQ1-1
+Added Net: Name=NetC7_2
+Added Member To Class: ClassName=Sch_Kur Member=Component C10 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component R4 4,7K-0,125W
+Added Member To Class: ClassName=Sch_Kur Member=Component VD3 VBUS054B-HSF-GS08
+Added Member To Class: ClassName=Sch_Kur Member=Component ZQ1 8 MHz
+Added Room: Name=Sch_Kur
