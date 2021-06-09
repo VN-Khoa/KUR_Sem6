@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=TEST NewDesignator=TP1
+Change Net Color : Old Net Color=Yellow New Net Color=Yellow
+Change Net Color : Old Net Color=RGB(255, 110, 110) New Net Color=RGB(255, 110, 110)
+Change Net Color : Old Net Color=RGB(110, 255, 255) New Net Color=RGB(110, 255, 255)
+Added Member To Class: ClassName=Sch_Kur Member=Component X1 MiniUSB
+Added Room: Name=Sch_Kur

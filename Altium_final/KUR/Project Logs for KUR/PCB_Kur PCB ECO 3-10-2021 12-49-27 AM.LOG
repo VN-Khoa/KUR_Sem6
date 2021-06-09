@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=  NewDesignator=C3
+Added Pin To Net: NetName=NetDD1_15 Pin=X1-3
+Added Pin To Net: NetName=GND Pin=X1-5
+Added Member To Class: ClassName=Sch_Kur Member=Component BQ1 8 MHz
+Added Member To Class: ClassName=Sch_Kur Member=Component C2 220uF-10V
+Added Room: Name=Sch_Kur
+PCB-ECO: Change Pad Pin/Pkg Length: Old=0mm New=5mm
+PCB-ECO: Change Pad Pin/Pkg Length: Old=0mm New=5mm
+PCB-ECO: Change Pad Pin/Pkg Length: Old=0mm New=5mm

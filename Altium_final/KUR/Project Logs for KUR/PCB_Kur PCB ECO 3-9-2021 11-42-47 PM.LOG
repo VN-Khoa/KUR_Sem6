@@ -1,0 +1,158 @@
+Added Component: Designator=BA1(28# Buzzer MINI)
+Added Component: Designator=BQ1(CRYSTAL-HC49S)
+Added Component: Designator=C1(Cap Ceramic 0603 SMD)
+Added Component: Designator=C2(CAP ALU CASE E SMD)
+Added Component: Designator=C3(Cap Ceramic 0603 SMD)
+Added Component: Designator=C4(CAP ALU CASE E SMD)
+Added Component: Designator=C5(Cap Ceramic 0603 SMD)
+Added Component: Designator=C6(Cap Ceramic 0805 SMD)
+Added Component: Designator=C7(Cap Ceramic 0805 SMD)
+Added Component: Designator=C8(Cap Ceramic 0603 SMD)
+Added Component: Designator=C9(Cap Ceramic 0603 SMD)
+Added Component: Designator=C10(Cap Ceramic 0603 SMD)
+Added Component: Designator=C11(Cap Ceramic 0603 SMD)
+Added Component: Designator=C12(Cap Ceramic 0603 SMD)
+Added Component: Designator=C13(Cap Ceramic 0603 SMD)
+Added Component: Designator=DD1(SSOP 28)
+Added Component: Designator=DD2(stm32f103c8t6-48LQFP)
+Added Component: Designator=hole1(Screw 3 small)
+Added Component: Designator=hole2(Screw 3 small)
+Added Component: Designator=hole3(Screw 3 small)
+Added Component: Designator=hole4(Screw 3 small)
+Added Component: Designator=R1(Res 0805 SMD)
+Added Component: Designator=R2(Res 0805 SMD)
+Added Component: Designator=R3(Res 0805 SMD)
+Added Component: Designator=R4(Res 0805 SMD)
+Added Component: Designator=R5(Res 0805 SMD)
+Added Component: Designator=R6(Res 0805 SMD)
+Added Component: Designator=VD1(Led 0805R)
+Added Component: Designator=VD2(Led 0805G)
+Added Component: Designator=VT1(SOT-23)
+Added Component: Designator=X1(USB_MNI_B)
+Added Component: Designator=X2(Header_4)
+Added Component: Designator=X3(Header_2)
+Added Pin To Net: NetName=NetBA1_1 Pin=BA1-1
+Added Pin To Net: NetName=GND Pin=BA1-2
+Added Pin To Net: NetName=NetBQ1_1 Pin=BQ1-1
+Added Pin To Net: NetName=NetBQ1_2 Pin=BQ1-2
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=+5V Pin=C1-2
+Added Pin To Net: NetName=+5V Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=+3V3 Pin=C3-2
+Added Pin To Net: NetName=+3V3 Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=NetBQ1_2 Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=NetBQ1_1 Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=+3V3 Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=+3V3 Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=+3V3 Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=+3V3 Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=+3V3 Pin=C13-2
+Added Pin To Net: NetName=NetDD1_1 Pin=DD1-1
+Added Pin To Net: NetName=+5V Pin=DD1-4
+Added Pin To Net: NetName=NetDD1_5 Pin=DD1-5
+Added Pin To Net: NetName=NetDD1_15 Pin=DD1-15
+Added Pin To Net: NetName=NetDD1_16 Pin=DD1-16
+Added Pin To Net: NetName=NetC5_2 Pin=DD1-17
+Added Pin To Net: NetName=GND Pin=DD1-18
+Added Pin To Net: NetName=+5V Pin=DD1-20
+Added Pin To Net: NetName=GND Pin=DD1-21
+Added Pin To Net: NetName=NetDD1_22 Pin=DD1-22
+Added Pin To Net: NetName=NetDD1_23 Pin=DD1-23
+Added Pin To Net: NetName=GND Pin=DD1-25
+Added Pin To Net: NetName=GND Pin=DD1-26
+Added Pin To Net: NetName=+3V3 Pin=DD2-1
+Added Pin To Net: NetName=NetBQ1_2 Pin=DD2-5
+Added Pin To Net: NetName=NetBQ1_1 Pin=DD2-6
+Added Pin To Net: NetName=NetC8_2 Pin=DD2-7
+Added Pin To Net: NetName=GND Pin=DD2-8
+Added Pin To Net: NetName=+3V3 Pin=DD2-9
+Added Pin To Net: NetName=OUT Pin=DD2-10
+Added Pin To Net: NetName=NetDD2_20 Pin=DD2-20
+Added Pin To Net: NetName=GND Pin=DD2-23
+Added Pin To Net: NetName=+3V3 Pin=DD2-24
+Added Pin To Net: NetName=NetDD1_5 Pin=DD2-30
+Added Pin To Net: NetName=NetDD1_1 Pin=DD2-31
+Added Pin To Net: NetName=NetDD2_34 Pin=DD2-34
+Added Pin To Net: NetName=GND Pin=DD2-35
+Added Pin To Net: NetName=+3V3 Pin=DD2-36
+Added Pin To Net: NetName=NetDD2_37 Pin=DD2-37
+Added Pin To Net: NetName=NetDD2_44 Pin=DD2-44
+Added Pin To Net: NetName=GND Pin=DD2-47
+Added Pin To Net: NetName=+3V3 Pin=DD2-48
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=+5V Pin=R1-2
+Added Pin To Net: NetName=+5V Pin=R2-1
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NetDD2_44 Pin=R3-2
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=NetDD2_20 Pin=R4-2
+Added Pin To Net: NetName=NetC8_2 Pin=R5-1
+Added Pin To Net: NetName=+3V3 Pin=R5-2
+Added Pin To Net: NetName=OUT Pin=R6-1
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR1_1 Pin=VD1-1
+Added Pin To Net: NetName=NetDD1_23 Pin=VD1-2
+Added Pin To Net: NetName=NetR2_2 Pin=VD2-1
+Added Pin To Net: NetName=NetDD1_22 Pin=VD2-2
+Added Pin To Net: NetName=NetR6_2 Pin=VT1-1
+Added Pin To Net: NetName=+5V Pin=VT1-2
+Added Pin To Net: NetName=NetBA1_1 Pin=VT1-3
+Added Pin To Net: NetName=+5V Pin=X1-1
+Added Pin To Net: NetName=GND Pin=X1-2
+Added Pin To Net: NetName=NetDD1_15 Pin=X1-2
+Added Pin To Net: NetName=NetDD1_16 Pin=X1-2
+Added Pin To Net: NetName=+3V3 Pin=X2-1
+Added Pin To Net: NetName=NetDD2_34 Pin=X2-2
+Added Pin To Net: NetName=NetDD2_37 Pin=X2-3
+Added Pin To Net: NetName=GND Pin=X2-4
+Added Pin To Net: NetName=OUT Pin=X3-1
+Added Pin To Net: NetName=GND Pin=X3-2
+Added Member To Class: ClassName=Sch_Kur Member=Component BA1 Buzzer-Active
+Added Member To Class: ClassName=Sch_Kur Member=Component BQ1 8 MHz
+Added Member To Class: ClassName=Sch_Kur Member=Component C1 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C2 220uF-10V
+Added Member To Class: ClassName=Sch_Kur Member=Component C3 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C4 220uF-10V
+Added Member To Class: ClassName=Sch_Kur Member=Component C5 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C6 22nF-50V
+Added Member To Class: ClassName=Sch_Kur Member=Component C7 22nF-50V
+Added Member To Class: ClassName=Sch_Kur Member=Component C8 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C9 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C10 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C11 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C12 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component C13 100nF-25V
+Added Member To Class: ClassName=Sch_Kur Member=Component DD1 FT232RL
+Added Member To Class: ClassName=Sch_Kur Member=Component DD2 STM32F103
+Added Member To Class: ClassName=Sch_Kur Member=Component hole1 Vit 3mm
+Added Member To Class: ClassName=Sch_Kur Member=Component hole2 Vit 3mm
+Added Member To Class: ClassName=Sch_Kur Member=Component hole3 Vit 3mm
+Added Member To Class: ClassName=Sch_Kur Member=Component hole4 Vit 3mm
+Added Member To Class: ClassName=Sch_Kur Member=Component R1 270R
+Added Member To Class: ClassName=Sch_Kur Member=Component R2 270R
+Added Member To Class: ClassName=Sch_Kur Member=Component R3 4,7K-0,125W
+Added Member To Class: ClassName=Sch_Kur Member=Component R4 4,7K-0,125W
+Added Member To Class: ClassName=Sch_Kur Member=Component R5 4,7K-0,125W
+Added Member To Class: ClassName=Sch_Kur Member=Component R6 22R
+Added Member To Class: ClassName=Sch_Kur Member=Component VD1 Red
+Added Member To Class: ClassName=Sch_Kur Member=Component VD2 Green
+Added Member To Class: ClassName=Sch_Kur Member=Component VT1 S9012_PNP
+Added Member To Class: ClassName=Sch_Kur Member=Component X1 MiniUSB
+Added Member To Class: ClassName=Sch_Kur Member=Component X2 Gate_4pins
+Added Member To Class: ClassName=Sch_Kur Member=Component X3 Gate_2pins
+Added Room: Name=Sch_Kur

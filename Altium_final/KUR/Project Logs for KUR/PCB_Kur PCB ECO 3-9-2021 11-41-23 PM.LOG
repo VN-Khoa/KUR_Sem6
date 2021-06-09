@@ -1,0 +1,71 @@
+Added Component: Designator=C1(C0805)
+Added Component: Designator=C3(C0805)
+Added Component: Designator=C5(C0805)
+Added Component: Designator=C6(C0805)
+Added Component: Designator=C7(C0805)
+Added Component: Designator=C8(C0805)
+Added Component: Designator=C9(C0805)
+Added Component: Designator=C10(C0805)
+Added Component: Designator=C11(C0805)
+Added Component: Designator=C12(C0805)
+Added Component: Designator=C13(C0805)
+Added Component: Designator=hole1(Screw 3 small)
+Added Component: Designator=hole2(Screw 3 small)
+Added Component: Designator=hole3(Screw 3 small)
+Added Component: Designator=hole4(Screw 3 small)
+Added Component: Designator=R6(Res 0805 SMD)
+Added Component: Designator=VT1(SOT-23)
+Added Component: Designator=X3(Header_2)
+Added Pin To Net: NetName=+3V3 Pin=C3-2
+Added Pin To Net: NetName=+3V3 Pin=C9-2
+Added Pin To Net: NetName=+3V3 Pin=C10-2
+Added Pin To Net: NetName=+3V3 Pin=C11-2
+Added Pin To Net: NetName=+3V3 Pin=C12-2
+Added Pin To Net: NetName=+3V3 Pin=C13-2
+Added Net: Name=+3V3
+Added Pin To Net: NetName=+5V Pin=C1-2
+Added Pin To Net: NetName=+5V Pin=VT1-2
+Added Net: Name=+5V
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=GND Pin=X3-2
+Added Net: Name=GND
+Added Pin To Net: NetName=NetBA1_1 Pin=VT1-3
+Added Net: Name=NetBA1_1
+Added Pin To Net: NetName=NetBQ1_1 Pin=C7-2
+Added Net: Name=NetBQ1_1
+Added Pin To Net: NetName=NetBQ1_2 Pin=C6-2
+Added Net: Name=NetBQ1_2
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Net: Name=NetC8_2
+Added Net: Name=NetDD1_1
+Added Net: Name=NetDD1_5
+Added Net: Name=NetDD1_15
+Added Net: Name=NetDD1_16
+Added Net: Name=NetDD1_22
+Added Net: Name=NetDD1_23
+Added Net: Name=NetDD2_20
+Added Net: Name=NetDD2_34
+Added Net: Name=NetDD2_37
+Added Net: Name=NetDD2_44
+Added Net: Name=NetR1_1
+Added Net: Name=NetR2_2
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR6_2 Pin=VT1-1
+Added Net: Name=NetR6_2
+Added Pin To Net: NetName=OUT Pin=R6-1
+Added Pin To Net: NetName=OUT Pin=X3-1
+Added Net: Name=OUT
+Added Class: Name=Sch_Kur
+Added Room: Name=Sch_Kur

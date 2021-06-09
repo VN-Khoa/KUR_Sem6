@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=OUT Pin=DD2-10
+Removed Pin From Net: NetName=NetDD1_5 Pin=DD2-30
+Removed Pin From Net: NetName=NetDD1_1 Pin=DD2-31
+Removed Pin From Net: NetName=GND Pin=H1-1
+Removed Pin From Net: NetName=GND Pin=H2-1
+Removed Pin From Net: NetName=GND Pin=H3-1
+Removed Pin From Net: NetName=GND Pin=H4-1
+Change Component Designator: OldDesignator=H1 NewDesignator=hole1
+Change Component Designator: OldDesignator=H2 NewDesignator=hole2
+Change Component Designator: OldDesignator=H3 NewDesignator=hole3
+Change Component Designator: OldDesignator=H4 NewDesignator=hole4
+Change Component Designator: OldDesignator=TEST NewDesignator=TP1
+Added Pin To Net: NetName=OUT Pin=DD2-2
+Added Pin To Net: NetName=NetDD1_5 Pin=DD2-12
+Added Pin To Net: NetName=NetDD1_1 Pin=DD2-13
+Change Net Color : Old Net Color=Yellow New Net Color=Yellow
+Change Net Color : Old Net Color=RGB(255, 110, 110) New Net Color=RGB(255, 110, 110)
+Change Net Color : Old Net Color=RGB(110, 255, 255) New Net Color=RGB(110, 255, 255)
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=Default
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=Default
+Added Member To Class: ClassName=Sch_Kur Member=Component DA2 VBUS054B-HSF-GS08
+Added Member To Class: ClassName=Sch_Kur Member=Component DD2 STM32F103
+Added Room: Name=Sch_Kur

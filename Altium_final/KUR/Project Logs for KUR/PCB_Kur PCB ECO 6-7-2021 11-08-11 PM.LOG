@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=OUT Pin=R6-1
+Removed Pin From Net: NetName=USB_P Pin=VD3-1
+Removed Pin From Net: NetName=GND Pin=VD3-2
+Removed Pin From Net: NetName=USB_N Pin=VD3-3
+Removed Pin From Net: NetName=+5V Pin=VD3-5
+Removed Pin From Net: NetName=+5V Pin=VT1-2
+Removed Member From Class: ClassName=Sch_Kur Member=R6
+Removed Member From Class: ClassName=Sch_Kur Member=VD3
+Removed Member From Class: ClassName=Sch_Kur Member=VT1
+Change Component Designator: OldDesignator=H1 NewDesignator=hole1
+Change Component Designator: OldDesignator=H2 NewDesignator=hole2
+Change Component Designator: OldDesignator=H3 NewDesignator=hole3
+Change Component Designator: OldDesignator=H4 NewDesignator=hole4
+Added Pin To Net: NetName=OUT Pin=BA1-1
+Added Room: Name=Sch_Kur

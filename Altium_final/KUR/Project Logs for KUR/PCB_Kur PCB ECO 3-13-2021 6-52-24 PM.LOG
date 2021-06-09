@@ -1,0 +1,7 @@
+Added Component: Designator=DA2(LLP75)
+Added Pin To Net: NetName=USB_P Pin=DA2-1
+Added Pin To Net: NetName=GND Pin=DA2-2
+Added Pin To Net: NetName=USB_N Pin=DA2-3
+Added Pin To Net: NetName=+5V Pin=DA2-5
+Added Member To Class: ClassName=Sch_Kur Member=Component DA2 VBUS054B-HSF-GS08
+Added Room: Name=Sch_Kur
